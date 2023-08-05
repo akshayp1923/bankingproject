@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTRATION</title>
+</head>
+<body bgcolor="Lightskyblue">
+
+<h2>REGISTRATION</h2>
+<form action="register" method="post">
+<!--    {% csrf_token %}-->
+      <input type="text" name="NAME" placeholder="NAME"><br>
+       <input type="date" name="date of birth" placeholder="date of birth"><br>
+       <input type="text" name="age" placeholder="age"><br>
+        <input type="email" name="email" placeholder="email"><br>
+    <label>
+    Gender :
+        </label><br>
+        <input type="radio" name="male"/> Male <br>
+        <input type="radio" name="female"/> Female <br>
+        <input type="text" name="mobile" placeholder="mobile"><br>
+        <input type="text" name="address" placeholder="address"><br>
+        </label>
+    <br>
+    District :
+    <select>
+
+<option value="Palakkad">Palakkad</option>
+<option value="Ernakulam">Ernakulam</option>
+<option value="Wayanad">Wayanad</option>
+<option value="Pathanamthitta">Pathanamthitta</option>
+<option value="Idukki">Idukki</option>
+
+</select>
+    </br>
+    <br>
+
+   <form name="form1" id="form1" action="/action_page.php">
+
+       cities: <select name="city" id="city">
+          Palakkad:
+        <option value="pattambi">pattambi</option>
+        <option value="ottapalam">ottapalam</option>
+         Ernakulam:
+          <option value="Aluva">Aluva</option>
+          <option value="kochi">kochi</option>
+         Wayanad:
+          <option value="panamaram">panamaram</option>
+          <option value="mananthavadi">mananthavadi</option>
+  </select>
+       <br><br>
+       Account type :
+    <select>
+        <option value="Savings account">Savings account</option>
+        <option value="current Account">current Account</option>
+  </br>
+</select>
+
+       <br><br>
+     Materials provide :
+    <select>
+        <option value="Debit card">Debit card</option>
+        <option value="Credit card">credit card</option>
+         <option value="cheque book">cheque book</option>
+    </select>
+       </br>
+         <br>
+  <input type="submit" value="Submit">
+        <a class="btn btn-warning" href=""> update </a>
+       <a href="{% url 'accounts:user_logout' %}" class="mx-2 inline-block font-medium text-sm px-4 py-2 leading-none bg-blue-900 rounded text-white border-white hover:border-transparent hover:text-gray-800 hover:bg-white mt-4 lg:mt-0">Logout</a>
+
+</form>
+
+
+
+<!--{% for msg in messages %}-->
+<!--{{msg}}-->
+<!--{% endfor %}-->
+</body>
+</html>
